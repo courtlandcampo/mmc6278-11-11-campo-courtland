@@ -30,6 +30,10 @@ const makePoemHTML = ([{title, author, lines}]) => {
     }
   })
 
+  let poemString = ""
+  poemArr.forEach( bArr => {
+    poemString+=makeTag("p")(bArr.join("<br>"))
+  })
  
   return `${titleTag}${authorNameTag}${poemString}`
 }
